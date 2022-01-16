@@ -12,7 +12,11 @@ import { Component, OnInit } from '@angular/core';
       <h2>{{ siteUrl}}</h2>
     <div>
     inline template
-  </div>`,
+  </div>
+  <input [id]="myId" type="text" value="Lilian">
+      <input id="{{myId}}" type="text" value="Lilian">
+  `,
+
   styles: [`
 div{
   color:red;
@@ -20,8 +24,9 @@ div{
   `]
 })
 export class TestComponent implements OnInit {
-public name ="Lilian"
+public name ="Lilian";
   public  siteUrl = window.location.href;
+public myId = "testId";
   constructor() { }
 
   ngOnInit(): void {
